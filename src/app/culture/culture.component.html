@@ -1,0 +1,42 @@
+<!--<mat-tab-group>-->
+  <!--<mat-tab label="idiom"> <app-idiom></app-idiom> </mat-tab>-->
+  <!--<mat-tab label="poem"> <app-poem></app-poem> </mat-tab>-->
+  <!--<mat-tab label="allegorical"> <app-allegorical></app-allegorical></mat-tab>-->
+  <!--<mat-tab label="famous"> <app-famous></app-famous></mat-tab>-->
+  <!--<mat-tab label="today_history"><app-today-history></app-today-history></mat-tab>-->
+  <!--<mat-tab label="dic"><app-dic></app-dic></mat-tab>-->
+<!--</mat-tab-group>-->
+
+<!-- 懒加载 -->
+<mat-tab-group dynamicHeight="true">
+  <mat-tab label="idiom">
+    <ng-template matTabContent>
+      <app-idiom></app-idiom>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="poem">
+    <ng-template matTabContent>
+      <app-poem></app-poem>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="allegorical">
+    <ng-template matTabContent>
+      <app-allegorical></app-allegorical>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="famous">
+    <ng-template matTabContent>
+      <app-famous></app-famous>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="today-history">
+    <ng-template matTabContent>
+      <app-today-history></app-today-history>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="dic">
+    <ng-template matTabContent>
+      <app-dic></app-dic>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

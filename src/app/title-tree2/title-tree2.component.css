@@ -1,0 +1,28 @@
+/*.mat-nested-tree-node, .mat-tree-node {*/
+  /*font-weight: 400;*/
+  /*font-size: 12px;*/
+/*}*/
+
+/*.mat-tree-node {*/
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*min-height: 28px;*/
+  /*flex: 1;*/
+  /*overflow: hidden;*/
+  /*word-wrap: break-word;*/
+/*}*/
+
+/*.mat-icon-button {*/
+  /*padding: 0;*/
+  /*min-width: 0;*/
+  /*width: 35px;*/
+  /*height: 35px;*/
+  /*flex-shrink: 0;*/
+  /*line-height: 35px;*/
+  /*border-radius: 50%;*/
+/*}*/
+
+.mat-tree-node, .ng-star-inserted{
+  /*padding-left: 5px;*/
+  background: rgba(205, 172, 255, 0.5);
+}

@@ -1,0 +1,33 @@
+<mat-accordion>
+  <!--<mat-expansion-panel>-->
+    <!--<mat-expansion-panel-header>-->
+      <!--<mat-panel-title>-->
+        <!--Personal data-->
+      <!--</mat-panel-title>-->
+      <!--<mat-panel-description>-->
+        <!--Type your name and age-->
+      <!--</mat-panel-description>-->
+    <!--</mat-expansion-panel-header>-->
+
+    <!--<mat-form-field>-->
+      <!--<input matInput placeholder="First name">-->
+    <!--</mat-form-field>-->
+
+    <!--<mat-form-field>-->
+      <!--<input matInput placeholder="Age">-->
+    <!--</mat-form-field>-->
+  <!--</mat-expansion-panel>-->
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false"  *ngFor="let Deails of dic?.data">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{Deails.dichanzi}} [{{Deails.dic_duyin}}] 【部首】：{{Deails.dic_bushou}}
+      </mat-panel-title>
+      <!--<mat-panel-description>-->
+        <!--Currently I am {{panelOpenState ? 'open' : 'closed'}}-->
+      <!--</mat-panel-description>-->
+    </mat-expansion-panel-header>
+    <p>【释义】{{Deails.dic_jianjie}}</p>
+    <p>【详细释义】{{Deails.dic_xiangjie}}</p>
+  </mat-expansion-panel>
+</mat-accordion>

@@ -1,0 +1,13 @@
+/*.famous{*/
+  /*max-width: 1000px;*/
+  /*margin-left: 35px;*/
+/*}*/
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+  display: block;
+  height: auto;
+  min-height: 38px;
+  line-height: 38px;
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  padding: 0;
+}

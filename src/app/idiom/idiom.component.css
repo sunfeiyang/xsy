@@ -1,0 +1,36 @@
+/*.example-headers-align .mat-expansion-panel-header-title,*/
+/*.example-headers-align .mat-expansion-panel-header-description {*/
+  /*flex-basis: 0;*/
+  /*max-width: 520px;*/
+  /*margin-left: 15px;*/
+/*}*/
+
+/*.example-headers-align .mat-expansion-panel-header-description {*/
+  /*justify-content: space-between;*/
+  /*align-items: center;*/
+/*}*/
+
+.details {
+  display: block;
+  position: relative;
+  flex: auto;
+  min-width: 0;
+  width: auto;
+}
+/*!**/
+  /*下一个 上一个按钮条控制*/
+/**!*/
+/*.mat-action-row {*/
+  /*border-top-style: solid;*/
+  /*border-top-width: 1px;*/
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*justify-content: flex-end;*/
+   /*padding: 0px;*/
+/*}*/
+/*!**/
+  /*主内容区调整*/
+/**!*/
+/*.mat-expansion-panel-body {*/
+  /*padding: 0 24px 0px;*/
+/*}*/

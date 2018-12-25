@@ -1,0 +1,28 @@
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel *ngFor="let Deails of idiom?.data; let i = index" [expanded]="step === i" (opened)="setStep(i)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{Deails.idiomname}} [{{Deails.idiom_spell}}]
+      </mat-panel-title>
+      <!--<mat-panel-description>-->
+      <!--2222222222222-->
+      <!--<mat-icon>333333333333</mat-icon>-->
+      <!--</mat-panel-description>-->
+    </mat-expansion-panel-header>
+
+    <mat-form-field class="details">
+      <input matInput placeholder="" readonly>【解释】 {{Deails.idiom_content}}
+      <input matInput placeholder="" readonly>【例子】 {{Deails.idiom_samples}}
+      <input matInput placeholder="" readonly>【来历】 {{Deails.idiom_derivation}}
+    </mat-form-field>
+
+    <mat-action-row *ngIf="i === 0">
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+    <mat-action-row *ngIf="i != 0">
+      <button mat-button color="warn" (click)="prevStep()">Previous</button>
+      <button mat-button color="primary" (click)="nextStep()">Next</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+
+</mat-accordion>

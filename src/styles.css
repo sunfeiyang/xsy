@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/*@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';*/
+/*@import "~@angular/material/prebuilt-themes/purple-green.css";*/
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  color: rgba(0,0,0,.87);
+}
+a {
+  text-decoration: none;
+}
+
+.basic-container {
+  padding: 20px;
+}
+
+.version-info {
+  font-size: 6pt;
+  float: right;
+}
+
+/*
+取消标签默认样式
+    list-style-type: none;
+*/

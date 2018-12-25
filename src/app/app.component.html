@@ -1,21 +1,82 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!--加载进度条-->
+<!--<mat-progress-bar  mode = "determinate"  value = "40" > </mat-progress-bar >-->
+<ng-container *ngIf="!shouldRun">
+  <mat-toolbar class="example-header">
+    <!-- 定义菜单栏按钮 -->
+    <button class="hamburger mat-button" mat-button="" title="菜单栏" (click)="sidenav.toggle()">
+      <span class="mat-button-wrapper">
+        <mat-icon class="mat-icon" role="img" svgicon="menu" aria-hidden="true">
+          <svg focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </mat-icon>
+      </span>
+    </button>
+    <!-- 菜单选项 -->
+    <li class="system_title">
+      <a class="" href="#" title="文学辞典">文学辞典</a>
+    </li>
+    <li class="system_title">
+      <a class="" href="#" title="影视资讯">影视资讯</a>
+    </li>
+    <li class="system_title">
+      <a class="" href="#" title="影视资讯">影视资讯</a>
+    </li>
+    <li class="system_title">
+      <a class="" href="#" title="影视资讯">影视资讯</a>
+    </li>
+    <input placeholder="搜索" type="search" class="lookup">
+  </mat-toolbar>
 
-<router-outlet></router-outlet>
+
+  <mat-sidenav-container class="example-container">
+    <!--<mat-sidenav #sidenav mode="side" opened class="example-sidenav"-->
+                 <!--[fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"-->
+                 <!--[fixedBottomGap]="options.value.bottom">-->
+
+    <mat-sidenav #sidenav mode="side" opened class="example-sidenav"
+                 [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
+                 [fixedBottomGap]="options.value.bottom">
+      <!--{{options.value.fixed ? 'Fixed' : 'Non-fixed'}} Sidenav-->
+      <!--<div class="ng-star-inserted">-->
+        <!--&lt;!&ndash;<a class="vertical-menu-item ng-star-inserted level-1 expanded"&ndash;&gt;-->
+           <!--&lt;!&ndash;style="position: relative" href="guide/quickstart"&ndash;&gt;-->
+           <!--&lt;!&ndash;title="对 Angular 和 Angular CLI 基础知识的简短介绍" target="_self">&ndash;&gt;-->
+          <!--&lt;!&ndash;快速上手&ndash;&gt;-->
+        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+          <!--<a class="vertical-menu-item" style="" href="#"-->
+           <!--title="快速上手" target="_self">快速上手</a>-->
+        <!--<p>-->
+          <!--<a class="vertical-menu-item" style="" href="#"-->
+             <!--title="快速上手2" target="_self">快速上手2</a>-->
+        <!--</p>-->
+      <!--</div>-->
+      <!--<app-title-tree></app-title-tree>-->
+      <app-title-tree2></app-title-tree2>
+    </mat-sidenav>
+
+    <mat-sidenav-content [formGroup]="options">
+      <p>
+        <app-culture></app-culture>
+      </p>
+      <!--网站侧边栏 包含上下footer 和 header-->
+      <!--<p>-->
+      <!--<mat-checkbox formControlName="fixed">Fixed</mat-checkbox>-->
+      <!--</p>-->
+      <!--<p>-->
+      <!--<mat-form-field>-->
+      <!--<input matInput type="number" formControlName="top" placeholder="Top gap">-->
+      <!--</mat-form-field>-->
+      <!--</p>-->
+      <!--<p>-->
+      <!--<mat-form-field>-->
+      <!--<input matInput type="number" formControlName="bottom" placeholder="Bottom gap">-->
+      <!--</mat-form-field>-->
+      <!--</p>-->
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <mat-toolbar class="example-footer"><app-footer></app-footer></mat-toolbar>
+</ng-container>
+<!--<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>-->
+

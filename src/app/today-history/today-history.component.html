@@ -1,9 +1,6 @@
 <mat-list class="today_history">
-  <h3 matSubheader>Folders</h3>
-  <mat-list-item *ngFor="let datails of todayHistory?.data">
-    <mat-icon matListIcon>folder</mat-icon>
-    <h4 matLine>{{datails.today_history_month}}-{{datails.today_history_day}}</h4>
-    <p matLine class="demo-2"> {{datails.todayhistorytitle}} </p>
-  </mat-list-item>
-  <mat-divider></mat-divider>
+  <div *ngFor="let datails of todayHistory?.data">
+    <mat-list-item>{{datails.today_history_year}}-{{datails.todayhistorymonth}}-{{datails.todayhistoryday}} —— {{datails?.todayhistorytitle}}</mat-list-item>
+    <mat-divider></mat-divider>
+  </div>
 </mat-list>

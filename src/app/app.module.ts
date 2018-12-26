@@ -58,6 +58,7 @@ import { TitleTreeComponent } from './title-tree/title-tree.component';
 import { TitleTree2Component } from './title-tree2/title-tree2.component';
 import { FooterComponent } from './footer/footer.component';
 import { IconComponent } from './icon/icon.component';
+import { WordseaComponent } from './wordsea/wordsea.component';
 
 @NgModule({
   exports: [
@@ -117,7 +118,8 @@ export class DemoMaterialModule {}
     TitleTreeComponent,
     TitleTree2Component,
     FooterComponent,
-    IconComponent
+    IconComponent,
+    WordseaComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@ export class TodayHistoryComponent implements OnInit {
   public todayHistory: Result;
 
   ngOnInit() {
-    this.http.get('/yy/poemRandom').subscribe(res => {
+    this.http.get('/yy/seltoday/1').subscribe(res => {
       this.todayHistory = <Result>res;
     });
   }

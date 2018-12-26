@@ -56,3 +56,9 @@
   left: 0;
   right: 0;
 }
+/*
+指定侧边栏的宽度
+ */
+/*mat-sidenav {*/
+  /*width: 200px;*/
+/*}*/

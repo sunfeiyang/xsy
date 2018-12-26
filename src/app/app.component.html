@@ -28,7 +28,8 @@
                  <!--[fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"-->
                  <!--[fixedBottomGap]="options.value.bottom">-->
 
-    <mat-sidenav #sidenav mode="side" opened class="example-sidenav"
+    <!-- 此处加opened，修改默认状态，打开还是关闭 -->
+    <mat-sidenav #sidenav mode="side" class="example-sidenav"
                  [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
                  [fixedBottomGap]="options.value.bottom">
       <!--{{options.value.fixed ? 'Fixed' : 'Non-fixed'}} Sidenav-->
